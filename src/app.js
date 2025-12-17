@@ -1,4 +1,4 @@
-
+import {WeatherService} from "../services/weather-service.js"
 export class App {
 
     constructor() {
