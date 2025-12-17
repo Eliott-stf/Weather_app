@@ -1,0 +1,17 @@
+{
+  "name": "appli-meteo",
+  "version": "1.0.0",
+  "description": "appli météo pour le fun",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "tailwindcss": "^4.1.18",
+    "vite": "^7.3.0"
+  }
+}
