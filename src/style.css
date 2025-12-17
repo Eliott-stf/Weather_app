@@ -1,2 +1,135 @@
+/**
+ * Fichier de styles avec Tailwind CSS v4
+ * 
+ * Ce fichier utilise Tailwind CSS avec des variables de thème personnalisées.
+ * Les variables @theme permettent de définir des tokens de design réutilisables.
+ * 
+ * Documentation : https://tailwindcss.com/docs/theme
+ */
+
+/* Import de Tailwind CSS */
+/* Cette directive importe toutes les classes utilitaires de Tailwind */
 @import "tailwindcss";
 
+/**
+ * Configuration du thème avec @theme
+ * 
+ * @theme est une directive spéciale de Tailwind v4 qui permet de :
+ * - Définir des variables de thème personnalisées
+ * - Générer automatiquement des classes utilitaires
+ * - Réutiliser ces valeurs dans le code
+ * 
+ * Les variables définies ici créent automatiquement des classes comme :
+ * - bg-primary-500, text-primary-500, etc.
+ * - border-radius-lg, shadow-md, etc.
+ */
+@theme {
+  /* 
+   * Couleurs personnalisées pour l'application météo
+   * Format : --color-{nom}-{variante}
+   * Les variantes (50, 100, 500, etc.) suivent le système de couleurs Tailwind
+   */
+  
+  /* Couleur primaire (bleu) */
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-500: #2563eb;
+  --color-primary-600: #1d4ed8;
+  --color-primary-700: #1e40af;
+  
+  /* Couleurs de texte */
+  --color-text-primary: #0f172a;      /* Gris très foncé */
+  --color-text-secondary: #475569;   /* Gris moyen */
+  --color-text-muted: #94a3b8;       /* Gris clair */
+  
+  /* Couleurs de fond */
+  --color-bg-primary: #ffffff;       /* Blanc */
+  --color-bg-secondary: #f8fafc;    /* Gris très clair */
+  --color-bg-dark: #0f172a;         /* Gris très foncé */
+  
+  /* Couleurs de bordure */
+  --color-border-light: #e2e8f0;     /* Gris clair */
+  --color-border-medium: #cbd5e1;   /* Gris moyen */
+  
+  /* Couleurs d'état */
+  --color-success: #22c55e;          /* Vert */
+  --color-success-dark: #15803d;      /* Vert foncé */
+  --color-warning: #f59e0b;          /* Jaune/Orange */
+  --color-warning-dark: #b45309;     /* Orange foncé */
+  --color-error: #b91c1c;            /* Rouge */
+  --color-error-light: #fef2f2;      /* Rouge très clair */
+  --color-error-border: #fecaca;    /* Rouge clair */
+  
+  /* 
+   * Typographie
+   * Définit la police et les tailles de texte
+   */
+  --font-family-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  
+  /* 
+   * Espacements (spacing)
+   * Utilisés pour padding, margin, gap, etc.
+   */
+  --spacing-xs: 0.375rem;    /* 6px */
+  --spacing-sm: 0.5rem;      /* 8px */
+  --spacing-md: 1rem;        /* 16px */
+  --spacing-lg: 1.5rem;      /* 24px */
+  --spacing-xl: 2rem;        /* 32px */
+  
+  /* 
+   * Rayons de bordure (border-radius)
+   * Utilisés pour arrondir les coins
+   */
+  --radius-sm: 0.5rem;       /* 8px */
+  --radius-md: 0.75rem;       /* 12px */
+  --radius-lg: 1rem;          /* 16px */
+  --radius-full: 9999px;      /* Forme de pilule */
+  
+  /* 
+   * Ombres (shadows)
+   * Utilisées pour donner de la profondeur
+   */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-primary: 0 8px 18px rgba(37, 99, 235, 0.25);
+  
+  /* 
+   * Largeurs maximales
+   * Pour limiter la largeur du contenu
+   */
+  --max-width-container: 920px;
+  
+  /* 
+   * Transitions
+   * Pour les animations fluides
+   */
+  --transition-fast: 0.12s ease;
+  --transition-normal: 0.2s ease;
+}
+
+/**
+ * Styles de base globaux
+ * Ces styles s'appliquent à toute l'application
+ */
+
+/* Reset : box-sizing pour tous les éléments */
+* {
+  box-sizing: border-box;
+}
+
+/* Styles du body */
+body {
+  margin: 0;
+  font-family: var(--font-family-sans);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-secondary);
+  line-height: 1.5;
+}
+
+/* Les liens héritent de la couleur du texte */
+a {
+  color: inherit;
+}
+ 
